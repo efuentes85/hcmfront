@@ -1,0 +1,181 @@
+<!--Codigo python para importar el nav -->
+{% extends 'nav.html' %}
+
+
+
+<!--Codigo python cargar el contenido de la pagina adentro del block title -->
+{%block title%}Crear Jornada{%endblock%}
+<!--Codigo python cargar el contenido de la pagina adentro del block content -->
+{% block content%}
+Crear Jornada
+<form method="POST" action="/create/">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit" , name="save">Crear Jornada</button>
+</form>
+<br/>
+<!-- 
+ 	<form class="form-group form-inline" method="POST" action="#"> 		
+ 		<label>Usuario:   </label>
+ 		<input class="form-control"  placeholder="Usuario" aria-label="Usuario" name="usuario">
+ 			<div class="w-100"></div>
+ 		<label>Jornada:   </label>	
+	    <input class="form-control"  placeholder="Jornada" aria-label="Jornada" name="jornada">
+	    	<div class="w-100"></div>
+	    <label>Codigo:   </label>
+	    <input class="form-control"  placeholder="Codigo" aria-label="Codigo" name="codigo">
+	    	<div class="w-100"></div>
+	  	
+ 		 <label for="email" class="mr-sm-2">Horario Inicio:</label>
+		 <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Horario Inicio" id="horaInicio">
+
+		 <label for="pwd" class="mr-sm-2">Horario Termino:</label>
+		 <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Horario Termino" id="horaFin">
+         
+          <div class="form-check mb-2 mr-sm-2">
+		    <label class="form-check-label">
+		      <input class="form-check-input" type="checkbox"> Lunes a Viernes?
+		    </label>
+		  </div>
+		  <div class="w-100"></div>
+		   <label for="email" class="mr-sm-2">Horario Inicio:</label>
+		 <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Horario Inicio" id="horaInicio">
+
+		 <label for="pwd" class="mr-sm-2">Horario Termino:</label>
+		 <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Horario Termino" id="horaFin">
+		     <div class="form-check mb-2 mr-sm-2">
+		    <label class="form-check-label">
+		      <input class="form-check-input" type="checkbox"> Lunes
+		    </label>
+		  </div>
+		   <div class="w-100"></div>
+		   <label for="email" class="mr-sm-2">Horario Inicio:</label>
+		 <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Horario Inicio" id="horaInicio">
+
+		 <label for="pwd" class="mr-sm-2">Horario Termino:</label>
+		 <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Horario Termino" id="horaFin">
+		     <div class="form-check mb-2 mr-sm-2">
+		    <label class="form-check-label">
+		      <input class="form-check-input" type="checkbox"> Martes
+		    </label>
+		  </div>
+		  
+		   <div class="w-100"></div>
+		   <label for="email" class="mr-sm-2">Horario Inicio:</label>
+		 <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Horario Inicio" id="horaInicio">
+
+		 <label for="pwd" class="mr-sm-2">Horario Termino:</label>
+		 <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Horario Termino" id="horaFin">
+		     <div class="form-check mb-2 mr-sm-2">
+		    <label class="form-check-label">
+		      <input class="form-check-input" type="checkbox"> Miercoles
+		    </label>
+		  </div>
+
+		   <div class="w-100"></div>
+		   <label for="email" class="mr-sm-2">Horario Inicio:</label>
+		 <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Horario Inicio" id="horaInicio">
+
+		 <label for="pwd" class="mr-sm-2">Horario Termino:</label>
+		 <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Horario Termino" id="horaFin">
+		     <div class="form-check mb-2 mr-sm-2">
+		    <label class="form-check-label">
+		      <input class="form-check-input" type="checkbox"> Jueves
+		    </label>
+		  </div>
+
+		   <div class="w-100"></div>
+		   <label for="email" class="mr-sm-2">Horario Inicio:</label>
+		 <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Horario Inicio" id="horaInicio">
+
+		 <label for="pwd" class="mr-sm-2">Horario Termino:</label>
+		 <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Horario Termino" id="horaFin">
+		     <div class="form-check mb-2 mr-sm-2">
+		    <label class="form-check-label">
+		      <input class="form-check-input" type="checkbox"> Viernes
+		    </label>
+		  </div>
+
+
+		  <div class="w-100"></div>
+		  <button type="submit" class="btn btn-primary mb-2">Submit</button>      -->
+		
+	     <!--  <input class="form-control"  placeholder="Usuario" aria-label="Usuario" name="usuario">
+	      <input class="form-control"  placeholder="Jornada" aria-label="Jornada" name="jornada">
+	      <input class="form-control"  placeholder="Codigo" aria-label="Codigo" name="codigo">
+	      <div class="row justify-content-md-center">
+		     <div class="col">
+		     	<label>Hora inicio</label>
+		     	<input class="form-control"  placeholder="FechaInicio" aria-label="Hora Inicio" name="dateInicio">
+		     </div>
+		      <div class="col">
+		      	<label>Hora fin</label>
+		      	<input class="form-control"  placeholder="FechaTermino" aria-label="Hora Termino" name="dateTermino">
+		      </div>
+		      <div class="col">
+		      	Lunes a Viernes?
+		      	<input class="form-control" type="checkbox" value="clicked" name="LuVie" checked>
+		      </div>
+	  	  </div>
+	      <button class="btn btn-outline-success" type="submit" , name ="save" , value='save'>Enviar</button> -->
+	</form>
+
+
+<!-- <form method="POST">
+	{% csrf_token %}
+	<div class="container">
+	<h1>Ingrese datos de la jornada</h1>
+		<label>Usuario</label> <input/><br/>
+		<label>Jornada</label> <input/><br/>
+		<label>Codigo</label>  <input/><br/>
+		<div class="dropdown">
+			<label>Horario Inicio</label>
+		 <select id="start_hour">
+			  <option value="00:00">00:00</option>
+			  <option value="00:30">00:30</option>
+			  <option value="01:00">01:00</option>
+			  <option value="01:30">01:30</option>
+			  <option value="02:00">02:00</option>
+			  <option value="02:30">02:30</option>
+			  <option value="03:00">03:00</option>
+			  <option value="03:30">03:30</option>
+			  <option value="04:00">04:00</option>
+			  <option value="04:30">04:30</option>
+			  <option value="05:00">05:00</option>
+			  <option value="06:00">06:00</option>
+			  <option value="07:00">07:00</option>
+			  <option value="08:00">08:00</option>
+			  <option value="09:00">09:00</option>
+			  <option value="10:00">10:00</option>
+			  <option value="11:00">11:00</option>
+			  <option value="12:00">12:00</option>
+			  <option value="13:00">13:00</option>
+			  <option value="14:00">14:00</option>
+			  <option value="15:00">15:00</option>
+			  <option value="16:00">16:00</option>
+			  <option value="17:00">17:00</option>
+			  <option value="18:00">18:00</option>
+			  <option value="19:00">19:00</option>
+			  <option value="20:00">20:00</option>
+			  <option value="21:00">21:00</option>
+			  <option value="22:00">22:00</option>
+			  <option value="23:00">23:00</option>
+		</select>
+		</div>
+		<div class="dropdown">
+		  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    Fin Jornada 
+		  </button>
+		  <div class="dropdown-menu" >
+		    <a class="dropdown-item" href="#">00:00</a>
+		    <a class="dropdown-item" href="#">01:00</a>
+		    <a class="dropdown-item" href="#">02:00</a>
+		  </div>
+		</div>
+	</div>
+</form>
+ -->
+
+
+{% endblock%}
+

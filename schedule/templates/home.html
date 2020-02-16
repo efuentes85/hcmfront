@@ -1,0 +1,36 @@
+<!--Codigo python para importar el nav -->
+{% extends 'nav.html' %}
+
+<!--Codigo python cargar el contenido de la pagina adentro del block content -->
+{%block title%}Pagina Principal{%endblock%}
+
+{% block content%}
+		<br>
+		{% if all_items%}
+		<table class="table table-hover table-primary">
+			 <thead>
+			    <tr>
+			      
+			      <th scope="col">Usuario</th>
+			      <th scope="col">Codigo</th>
+			      <th scope="col">Jornada</th>
+			      <th scope="col">Horario</th>
+			      <th scope="col">Editar</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+				{% for jc in all_items %}
+				<tr>					
+					<td>{{ jc.usuario }}</td>
+					<td>{{ jc.codigo }}</td>	
+					<td>{{ jc.jornada }}</td>				
+					<td>{{ jc.date }}</td>
+					<td><a href='#'><i class="far fa-edit"></i></a></td>				
+				</tr>	
+				{% endfor%}
+			</tbody>
+		</table>		
+		{% endif%}
+
+{% endblock%}
+
